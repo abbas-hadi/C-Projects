@@ -1,0 +1,21 @@
+//Relationship between console and file streams
+//Hadi Abbas
+
+#include <iostream>
+#include <fstream>
+#include <ostream>
+#include <istream>
+
+
+using namespace std;
+
+void printline(ostream & st) { //Watch out for letter/typing mistakes
+	st << "Hello there, how are you" << endl;
+}
+
+int main() {
+	ofstream of("outfile.txt");
+	printline(of); //will write to the file
+	printline(cout); //will write to the screen
+	return 0;
+}
